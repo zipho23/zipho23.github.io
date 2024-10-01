@@ -1,42 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-
-<head>
-<style>
-body {
-
-margin: 0;
-    height: 100vh;
-   display: flex;
-}
-
-.link {
- 
-	flex: 1;
-	   height: 100%
-        
+<head>  
+    <style>
+        body {
+          background-image: url(https://image.cdn2.seaart.ai/2024-06-22/cprbl2te878c73d9bpkg-4/3dc2e282402eef52389667ff3080fad6_high.webp);
         }
-	
-	.line1 {background: url(https://image.cdn2.seaart.ai/2024-06-22/cprbl2te878c73d9bpkg-4/3dc2e282402eef52389667ff3080fad6_high.webp) left center/ cover no-repeat;}
-	.line2 {background: url(https://images.adsttc.com/media/images/62bf/0cfd/3e4b/31ed/8e00/000a/medium_jpg/The_desolate_streets_of_Shibuya.jpg?1656687864) right center/ cover no-repeat;}
+        </style>
+    <link rel ="stylesheet" href ="styles.css">
+    <script>
+        function login() {
+            // Hardcoded username and password
+            const username = "Zipho";
+            const password = "123";
 
+            // Get input values
+            const inputUsername = document.getElementById("username").value;
+            const inputPassword = document.getElementById("password").value;
 
-h1 {font-size: 40px;}
-.two {color: black; background-color: white;}
-.one {color: white;background-color: black;}
-</style>
+            // Check if the input matches the hardcoded credentials
+            if (inputUsername === username && inputPassword === password) {
+                alert("Login successful!");
+                window.location.href = "Manga.html"; // Redirect to another page
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
 </head>
-	<body>
-	
-    <a href="Anime.html" class="link line1"></a>
-	<a href="Manga.html" class="link line2"></a>
-    
+<body>
+   
+    <form onsubmit="event.preventDefault(); login();">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" required><br><br>
 
-    
-	
-	
-	
-	</body>
-	
-	</html>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
