@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            background: url(https://wallpapercave.com/wp/1zIVRdg.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }               
+        
+        .border {
+            border: 5px solid black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            width: 90vw;	
+            height: 80vh;
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            align-items: center;
+            position: relative;
+            flex-direction: column; /* Column direction for items */
+        }
+        
+        .meny {
+            text-align: center;
+            width: 200px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            position: absolute;
+            height: 80vh;
+            left: 0px;
+            top: 0px;
+            opacity: 70%;
+        }
+        
+        .meny a {
+            text-decoration: none;
+            color: black;
+            margin: 14px 0;
+            font-size: 16px;
+        }
+        
+        .rubrik {
+            text-align: center;
+            margin: 0;
+            padding: 10px 10px;
+            border: 5px solid black;
+            border-radius: 30px;
+            position: absolute; 
+            top: 10px; /* Adjust top position */
+            left: 50%; /* Centering horizontally */
+            transform: translateX(-50%); /* Centering correction */
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column; /* Aligning input elements vertically */
+            margin-left: 220px; /* Leave space for meny */
+            margin-top: 60px; /* Add some space below rubrik */
+            width: calc(100% - 220px); /* Adjust width according to meny */
+        }
+
+        .text-area {
+            width: 100%;
+            height: 260px;
+            margin-bottom: 10px; /* Space between the text area and buttons */
+        }
+
+        .save-btn, .clear-btn {
+            margin-top: 10px; /* Space between the buttons */
+        }
+        
+        .meny a:hover {
+            color: blue; 
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="border">
+
+    <h1 class="rubrik">Josefs önskelista</h1>
+    
+    <div class="meny">
+		<a href ="index.html">Huvudmeny</a>
+        <a href="pappa.html">Pappas önskelista</a>
+        <a href="mamma.html">Mammas önskelista</a>
+        <a href="dina.html">Dinas önskelista</a>
+        <a href="aleia.html">Aleias önskelista</a>
+        <a href="jones.html">Jones önskelista</a>
+        <a href="amin.html">Amins önskelista</a>
+        <a href="celine.html">Celines önskelista</a>
+        <a href="josef.html">Josefs önskelista</a>
+    </div>
+    
+    <!-- Text Area for Input -->
+    <div class="input-container">
+        <textarea id="textInput" class="text-area" placeholder=""></textarea>
+        <button class="save-btn" onclick="saveText()">Spara</button>
+        <button class="clear-btn" onclick="clearText()">Rensa</button>
+    </div>
+</div>
+
+<script>
+// Load saved text from localStorage when the page loads
+window.onload = function() {
+    const Josef = localStorage.getItem('Josef');
+    if (Josef) {
+        document.getElementById('textInput').value = Josef;
+    }
+};
+
+// Save text to localStorage
+function saveText() {
+    const textValue = document.getElementById('textInput').value;
+    localStorage.setItem('Josef', textValue);
+    alert('Sparat');
+}
+
+// Clear the saved text
+function clearText() {
+    localStorage.removeItem('Josef');
+    document.getElementById('textInput').value = ''; // Clear the text area
+    alert('Rensad');
+}
+</script>
+
+</body>
+
+</html>

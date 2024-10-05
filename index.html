@@ -1,47 +1,90 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>  
-    <style>
+<head>
+	<style>
+	
+	
+	
+		body {
+	background: url(https://wallpapercave.com/wp/1zIVRdg.jpg);
+			background-size: cover;
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width:100vw;
 
-        body {
-          background: url(https://image.cdn2.seaart.ai/2024-06-22/cprbl2te878c73d9bpkg-4/3dc2e282402eef52389667ff3080fad6_high.webp);
-          margin: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        </style>
-    <link rel ="stylesheet" href ="styles.css">
-    <script>
-        function login() {
-            // Hardcoded username and password
-            const username = "Zipho";
-            const password = "123";
+			margin: 0;
+			
 
-            // Get input values
-            const inputUsername = document.getElementById("username").value;
-            const inputPassword = document.getElementById("password").value;
-
-            // Check if the input matches the hardcoded credentials
-            if (inputUsername === username && inputPassword === password) {
-                alert("Login successful!");
-                window.location.href = "Manga.html"; // Redirect to another page
-            } else {
-                alert("Invalid username or password.");
-            }
-        }
-    </script>
+		}               
+		
+	.border {border: 5px solid black;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		width: 90vw;	
+		height: 80vh;
+		backdrop-filter: blur(10px);
+		padding: 10px;
+		align-items: center;
+		position: relative;
+		}
+		
+		.meny {text-align: center;
+		width: 200px;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+	padding: 10px;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	height: 80vh;
+	opacity: 70%;
+	
+	
+			
+			}
+			
+			.meny a {
+			text-decoration: none;
+			color: black;
+			margin: 18px 0;
+			font-size: 16px;
+		}
+		
+		.rubrik {text-align: center;
+		margin: 0;
+		padding: 10px 10px;
+		border: 5px solid black;
+		border-radius: 30px;
+		
+	}
+	.meny a:hover {color:blue; font-size: 20px;}
+		
+		
+		
+	
+	</style>
 </head>
+
 <body>
-   
-    <form onsubmit="event.preventDefault(); login();">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" required><br><br>
+<div class = "border">
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" required><br><br>
-
-        <input type="submit" value="Login">
-    </form>
+<h1 class ="rubrik">Önskelista 2024</h1>
+<div class = "meny">
+<a href="pappa.html">Pappas önskelista</a>
+<a href="mamma.html">Mammas önskelista</a>
+<a href="dina.html">Dinas önskelista</a>
+<a href="aleia.html">Aleias önskelista</a>
+<a href="jones.html">Jones önskelista</a>
+<a href="amin.html">Amins önskelista</a>
+<a href="celine.html">Celines önskelista</a>
+<a href="josef.html">Josefs önskelista</a>
+</div>
+</div>
 </body>
+
 </html>
